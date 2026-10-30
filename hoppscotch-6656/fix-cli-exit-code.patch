@@ -1,6 +1,6 @@
-From 3b0b1d0136ceed8d0e79488a01c5316f4b413806 Mon Sep 17 00:00:00 2001
+From 6bd50f13af8d4482a104253bf31340a69b3fdaf9 Mon Sep 17 00:00:00 2001
 From: Sudhakar Yadav <sudhakar810nit@gmail.com>
-Date: Fri, 30 Oct 2026 10:32:46 +0000
+Date: Fri, 30 Oct 2026 10:34:25 +0000
 Subject: [PATCH] fix(cli): exit with non-zero code on invalid usage
 
 Invalid usage (missing/unknown arguments, unknown commands or options)
@@ -13,9 +13,6 @@ the CommanderError exit code via `process.exitCode`. `--help` and
 `--ver` still exit with 0.
 
 Closes #6656
-
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01Uh4jdwhHNcP1ZkF8yx4s6S
 ---
  .../src/__tests__/e2e/commands/test.spec.ts   | 31 ++++++++++++++++++-
  packages/hoppscotch-cli/src/index.ts          | 20 ++++++++++--
